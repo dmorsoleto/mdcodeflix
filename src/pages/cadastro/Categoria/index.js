@@ -29,7 +29,7 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    const url = 'http://localhost:8080/categorias';
+    const url = 'https://mdcodeflix.herokuapp.com/categorias';
 
     fetch(url)
       .then(async (response) => {
