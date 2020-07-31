@@ -29,7 +29,9 @@ function CadastroCategoria() {
   }
 
   useEffect(() => {
-    const url = 'https://mdcodeflix.herokuapp.com/categorias';
+    const url = window.location.hostname.includes('localhost')
+      ? 'http://localhost:8080/categorias'
+      : 'https://mdcodeflix.herokuapp.com/categorias';
 
     fetch(url)
       .then(async (response) => {
